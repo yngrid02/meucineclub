@@ -10,6 +10,13 @@ import {
   ThemeProvider
 } from "./contexts/ThemeContext";
 
+import {
+  AuthProvider
+} from "./contexts/AuthContext";
+
+import RotaProtegida
+from "./routes/RotaProtegida";
+
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Favoritos from "./pages/Favoritos";
@@ -20,30 +27,38 @@ function App() {
 
     <ThemeProvider>
 
-      <BrowserRouter>
+      <AuthProvider>
 
-        <Header />
+        <BrowserRouter>
 
-        <Routes>
+          <Header />
 
-          <Route
-            path="/"
-            element={<Home />}
-          />
+          <Routes>
 
-          <Route
-            path="/login"
-            element={<Login />}
-          />
+            <Route
+              path="/"
+              element={<Home />}
+            />
 
-          <Route
-            path="/favoritos"
-            element={<Favoritos />}
-          />
+            <Route
+              path="/login"
+              element={<Login />}
+            />
 
-        </Routes>
+            <Route element={<RotaProtegida />}>
 
-      </BrowserRouter>
+              <Route
+                path="/favoritos"
+                element={<Favoritos />}
+              />
+
+            </Route>
+
+          </Routes>
+
+        </BrowserRouter>
+
+      </AuthProvider>
 
     </ThemeProvider>
 

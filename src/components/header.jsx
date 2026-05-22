@@ -2,13 +2,25 @@ import { Link } from "react-router-dom";
 
 import { useContext } from "react";
 
-import { ThemeContext }
-from "../contexts/ThemeContext";
+import {
+  ThemeContext
+} from "../contexts/ThemeContext";
+
+import {
+  AuthContext
+} from "../contexts/AuthContext";
 
 function Header() {
 
-  const { tema, alternarTema } =
-    useContext(ThemeContext);
+  const {
+    tema,
+    alternarTema
+  } = useContext(ThemeContext);
+
+  const {
+    usuario,
+    logout
+  } = useContext(AuthContext);
 
   return (
 
@@ -32,6 +44,29 @@ function Header() {
       <button onClick={alternarTema}>
         Tema atual: {tema}
       </button>
+
+      <br />
+      <br />
+
+      {usuario ? (
+
+        <div>
+
+          <p>
+            Bem-vindo, {usuario.nome}
+          </p>
+
+          <button onClick={logout}>
+            Sair
+          </button>
+
+        </div>
+
+      ) : (
+
+        <p>Usuário não logado</p>
+
+      )}
 
     </nav>
   );
