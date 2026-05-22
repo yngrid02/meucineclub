@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link }
+from "react-router-dom";
 
-import { useContext } from "react";
+import { useContext }
+from "react";
 
 import {
   ThemeContext
@@ -30,7 +32,9 @@ function Header() {
 
       <br />
 
-      <Link to="/login">Login</Link>
+      <Link to="/login">
+        Login
+      </Link>
 
       <br />
 
@@ -42,7 +46,7 @@ function Header() {
       <br />
 
       <button onClick={alternarTema}>
-        Tema atual: {tema}
+        Tema: {tema}
       </button>
 
       <br />
@@ -53,7 +57,8 @@ function Header() {
         <div>
 
           <p>
-            Bem-vindo, {usuario.nome}
+            Bem-vindo,
+            {usuario.nome}
           </p>
 
           <button onClick={logout}>
@@ -64,11 +69,14 @@ function Header() {
 
       ) : (
 
-        <p>Usuário não logado</p>
+        <p>
+          Usuário não logado
+        </p>
 
       )}
 
     </nav>
+
   );
 }
 

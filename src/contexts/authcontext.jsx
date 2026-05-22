@@ -52,6 +52,7 @@ export function AuthProvider({
   }, [usuario]);
 
   return (
+
     <AuthContext.Provider
       value={{
         usuario,
@@ -59,7 +60,10 @@ export function AuthProvider({
         logout
       }}
     >
+
       {children}
+
     </AuthContext.Provider>
+
   );
 }

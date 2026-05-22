@@ -20,6 +20,7 @@ from "./routes/RotaProtegida";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Favoritos from "./pages/Favoritos";
+import DetalhesFilme from "./pages/DetalhesFilme";
 
 function App() {
 
@@ -43,6 +44,11 @@ function App() {
             <Route
               path="/login"
               element={<Login />}
+            />
+
+            <Route
+              path="/filme/:id"
+              element={<DetalhesFilme />}
             />
 
             <Route element={<RotaProtegida />}>

@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { useContext }
+from "react";
 
 import {
   Navigate,
@@ -15,7 +16,9 @@ function RotaProtegida() {
     useContext(AuthContext);
 
   if (!usuario) {
-    return <Navigate to="/login" />;
+    return (
+      <Navigate to="/login" />
+    );
   }
 
   return <Outlet />;

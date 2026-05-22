@@ -12,7 +12,11 @@ Depopis envolvi o app com o provider, assim além do pai qualquer filho tem aces
 
 Passo 3:
 Agora comecei a mexer com a parte o login, no context criei o authcontext para pedir as informações do usuário a ser logado, como não tenho banco de dados ele entra após qualquer digitação no campo de nome. O authcontext ele resolve que toda a aplicação tenha uma única autenticação, ou seja, o mesmo login para todas as páginas que o usuário logado queira entrar. O useEffect é muito utilizado aqui pois ele evita que o usuário se deslogue após a atualização da página, ele salva o usuário no navegador.
-O provider ele compartilha os dados, aqui no ath qualquer componente consegue acessar algumas coisas como login, usuario e logout. 
+O provider ele compartilha os dados, aqui no auth qualquer componente consegue acessar algumas coisas como login, usuario e logout. 
 O header agora ele nevega entre páginas, troca de tema, mostra usuário logado e tem o botão de logout.
 Criei a rota protegida, que verifica se tem usuário logado para ser feita a rotatividade dele na rota sugerida - login - home...
+
+Passo 4:
+Criei a pagina detalhes do filme, além de listar os filmews na página home, precisei atualizar o meu arquivo app para adc a rota dinamica que é orientada por um id do filme, assim mostra infos do filme e a nova pagina de detalhes. 
+Após criar a pag detalhes, modifiquei a pagina home adicionando os filmes nela, com o botao detalhes, aqui coloquei a listagem do filmes.
 
