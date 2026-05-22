@@ -1,16 +1,11 @@
-# React + Vite
+Primeiros passos:
+Após criar um novo projeto, criei os arquivos e pastas a serem utilizadas. 
+Dentro de src crirei a pasta components, contexts, pages e routes, dentro delas  por enquanto coloquei herader, favoritos, home e login. 
+As tres paginas entro de page inicialmente apenas criei a parte do link de redirecionamento, nada de conteúdo. 
+No app.jsx configurei o BROWSERRROUTER, apos a intalação também feita inicialmente, apoós a instalação do react em java.
+Agora criei o herader com os links, não utilizei o <a> pois não possui necessidade de recarregar a pagina inteira toda vez, isso não funciona com o SPA que estamos usando. Adicionei ele no app.jsx.
+Criei o theme context, que é a parte html da tela, onde inserir a função dos botões de acesso as páginas e o modo claro ou escuro a ser escolhido, assim reorganizei as rotas e o app para que fique tudo alinhado. Aqui utilizei o usereffect para ele modificar o tema ao ser acionado.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Passo 2:
+Após a criação do theme context, o hearde precisou ser modificado para eu por o contexto nele, usei o userContext para pegar esses dados do contexto, sem props.
+Depopis envolvi o app com o provider, assim além do pai qualquer filho tem acesso a esses dados envolvidos na aplicação.
